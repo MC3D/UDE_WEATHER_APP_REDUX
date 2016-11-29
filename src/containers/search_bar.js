@@ -13,6 +13,8 @@ export default class SearchBar extends Component {
   }
   _handleSubmit(event){
     event.preventDefault();
+    
+    // need to fetch weather data
   }
   render() {
     return (
