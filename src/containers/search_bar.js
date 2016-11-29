@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { bindActionCretors } from 'redux';
+import { bindActionCreators } from 'redux';
 import { fetchWeather } from '../actions/index';
 
 class SearchBar extends Component {
@@ -10,6 +10,7 @@ class SearchBar extends Component {
       term: ''
     };
     this._handleInput = this._handleInput.bind(this);
+    this._handleSubmit = this._handleSubmit.bind(this);
   }
   _handleInput(event){
     this.setState({term: event.target.value});
