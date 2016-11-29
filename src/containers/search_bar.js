@@ -11,9 +11,12 @@ export default class SearchBar extends Component {
   _handleInput(event){
     this.setState({term: event.target.value});
   }
+  _handleSubmit(event){
+    event.preventDefault();
+  }
   render() {
     return (
-      <form className='input-group'>
+      <form onSubmit={this._handleSubmit} className='input-group'>
         <input
           placeholder='Get a five-day forecast in your favorite cities'
           className='form-control'
